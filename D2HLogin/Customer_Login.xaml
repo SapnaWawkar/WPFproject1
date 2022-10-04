@@ -1,0 +1,61 @@
+﻿<Window x:Class="D2HLogin.Customer_Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:D2HLogin"
+        mc:Ignorable="d"
+        Title="Customer_Login" Height="450" Width="800">
+    <Grid Background="#FFF19AC1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition Width="600"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="370"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="0" Grid.Row="1">
+            <StackPanel Background="AntiqueWhite">
+                <Button Click="GetMyInformation" Grid.Column="0" Margin="5" Background="#FF52C927">1. Get My Infomation</Button>
+                <Button Click="GetYearlyStatement" Grid.Column="0" Margin="5" Background="#FF52C927">2. Get Yearly Statement</Button>
+                <Button Click="RaiseComplaint" Grid.Column="0" Margin="5" Background="#FF52C927">3. Raise a Complaint</Button>
+                <Button Click="GetAgentInformation" Grid.Column="0" Margin="5" Background="#FF52C927">4. Get Agent Information</Button>
+                <Button Click="LogOut" Grid.Column="0" Margin="5" Background="#FF52C927">5.LogOut</Button>
+            </StackPanel>
+
+        </Grid>
+        <DataGrid x:Name="Symbol" Grid.Column="0" Background="#FFE270F1" Visibility="Visible">
+            <Label></Label>
+        </DataGrid>
+        <DataGrid x:Name="Declaration" Grid.Column="1" Background="#FFE270F1" Visibility="Visible">
+
+        </DataGrid>
+        <DataGrid x:Name="c1" Grid.Column="1" Grid.Row="1" Background="#FFF4C9C9" Visibility="Hidden" AutoGenerateColumns="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="CustomerId" Binding="{Binding CustomerId}"></DataGridTextColumn>
+                <DataGridTextColumn Header="FirstName" Binding="{Binding FirstName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="LastName" Binding="{Binding LastName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="PackageName" Binding="{Binding PackageName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="GroupName" Binding="{Binding GroupName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="AreaName" Binding="{Binding AreaName}"></DataGridTextColumn>
+            </DataGrid.Columns>
+            
+        </DataGrid>
+        <DataGrid x:Name="c2" Grid.Column="1" Grid.Row="1" Background="#FFF4C9C9" Visibility="Hidden" AutoGenerateColumns="True">
+            <Label>Get Yearly Statement</Label>
+        </DataGrid>
+        <DataGrid x:Name="c3" Grid.Column="1" Grid.Row="1" Background="#FFF4C9C9" Visibility="Hidden" AutoGenerateColumns="True">
+            <Label>Raise Complaint</Label>
+        </DataGrid>
+        <DataGrid x:Name="c4" Grid.Column="1" Grid.Row="1" Background="#FFF4C9C9" Visibility="Hidden" AutoGenerateColumns="True">
+            <Label>Get Agent Information</Label>
+        </DataGrid>
+        
+
+
+
+    </Grid>
+</Window>

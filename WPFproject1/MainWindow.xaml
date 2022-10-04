@@ -1,0 +1,22 @@
+﻿<Window x:Class="WPFproject1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFproject1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Content="ON" HorizontalAlignment="Left" Width="30" Click="Click"  Background="#FF17BB08" Margin="10,0,0,405"></Button>
+        <Button Content="Table" Width="50" Background="#FF17BB08" Click="Button_Click" HorizontalAlignment="Right" RenderTransformOrigin="0.413,8.132" Margin="0,47,692,357"/>
+        <TextBox x:Name="InputForTable" Background="#FFF3AD9C"  RenderTransformOrigin="-6.876,-0.323" Margin="10,47,760,357" Text="3"/>
+        <Label x:Name="LableTable" Content="Table value's are.." Margin="10,82,688,329" Background="#FFF6D9D9"></Label>
+
+        <TextBox x:Name="Username"  Background="#FFF9DEA2"  RenderTransformOrigin="-6.876,-0.323" Margin="207,10,495,395"/>
+        <TextBox x:Name="Password"  Background="#FFF9DEA2"  RenderTransformOrigin="-6.876,-0.323" Margin="316,10,376,395"/>
+        <Button Content="SingUp" Margin="218,62,521,350" RenderTransformOrigin="-3.992,0.273" Background="#FF0BC01C" Click="Sign_Up"></Button>
+        <!--Button Content="SingIn" Margin="339,62,400,350" RenderTransformOrigin="-3.992,0.273" Background="#FF0BC01C" Click="Sign_In"></Button-->
+        <Label x:Name="CustomerLogin" Content="SignIn or SignUp" Margin="218,94,400,309" Background="#FFF6D9D9"></Label>
+        <Button  Click="GoToDashBoard" Content="DashBoard" Margin="449,73,270,309"/>
+    </Grid>
+</Window>
